@@ -1,7 +1,9 @@
+var generatos = [];
+
 angular.module('Gen', [])
     .controller('MainCtrl', function($scope, $timeout) {
 
-        $scope.generators = [cpfGen, guidGen];
+        $scope.generators = generatos;
 
 
         $scope.gen = function(generator) {
@@ -59,7 +61,7 @@ function copyToClipboard(text) {
 document.addEventListener('DOMContentLoaded', function() {
     angular.bootstrap(document, ['Gen']);
 });
-var cpfGen = {
+generatos.push({
     title: 'CPF',
     alg: function(){
         function randomiza(n) {
@@ -101,8 +103,8 @@ var cpfGen = {
 
         return cpf;
     }
-};
-var guidGen = {
+});
+generatos.push({
     title: 'Guid',
     alg: function () {
         function s4() {
@@ -114,4 +116,4 @@ var guidGen = {
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
             s4() + '-' + s4() + s4() + s4();
     }
-};
+});

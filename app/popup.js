@@ -1,7 +1,9 @@
+var generatos = [];
+
 angular.module('Gen', [])
     .controller('MainCtrl', function($scope, $timeout) {
 
-        $scope.generators = [cpfGen, guidGen];
+        $scope.generators = generatos;
 
 
         $scope.gen = function(generator) {

@@ -1,4 +1,4 @@
-var cpfGen = {
+generatos.push({
     title: 'CPF',
     alg: function(){
         function randomiza(n) {
@@ -40,4 +40,4 @@ var cpfGen = {
 
         return cpf;
     }
-};
+});

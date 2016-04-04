@@ -1,4 +1,4 @@
-var guidGen = {
+generatos.push({
     title: 'Guid',
     alg: function () {
         function s4() {
@@ -10,4 +10,4 @@ var guidGen = {
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
             s4() + '-' + s4() + s4() + s4();
     }
-};
+});
