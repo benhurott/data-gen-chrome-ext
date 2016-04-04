@@ -1,0 +1,43 @@
+$primary: #651665;
+
+body {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+a.no-styled {
+    &:link { text-decoration: none; }
+    &:visited { text-decoration: none; }
+    &:hover { text-decoration: underline; }
+    &:active { text-decoration: underline; }
+}
+
+header {
+    color: #fff;
+    background-color: $primary;
+    height: 70px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+button i {
+    color: $primary;
+}
+
+.gen-row {
+    margin-bottom: 10px;
+}
+
+.info {
+    border-top: 2px solid $primary;
+    width: 100%;
+    color: $primary;
+    padding: 5px;
+}
+
+.clickable {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DataGen</title>
+    <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/index.dist.css">
+</head>
+
+<body ng-controller="MainCtrl">
+    <header>
+        <i class="fa fa-paperclip"></i> GENERATOR
+    </header>
+    <section class="container-fluid">
+        <div class="row gen-row" ng-repeat="g in generators">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">{{g.title}}</span>
+                    <input readonly 
+                           type="text" 
+                           class="form-control" 
+                           ng-model="g.val" 
+                           aria-describedby="sizing-addon2">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="gen(g)" title="Generate Value">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button class="btn btn-default" type="button" ng-click="copyToClipboard(g.val)" title="Copy to Clipboard">
+                            <i class="fa fa-clipboard"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="info" ng-show="message.visible">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    {{message.text}}
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <i class="fa fa-times-circle clickable" ng-click="closeMessage()"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="dist/jquery/jquery-2.2.2.min.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/angular/angular.min.js"></script>
+    <script src="dist/index.dist.js"></script>
+
+</body>
+
+</html>

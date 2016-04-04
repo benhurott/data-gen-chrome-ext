@@ -1,0 +1,27 @@
+{
+  "name": "data-gen-chrome-ext",
+  "version": "1.0.0",
+  "description": "A Google Chrome Extension for generating util info, like GUID, CPF(Brazil), etc...",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benhurott/data-gen-chrome-ext.git"
+  },
+  "author": "Ben-hur Santos ott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benhurott/data-gen-chrome-ext/issues"
+  },
+  "homepage": "https://github.com/benhurott/data-gen-chrome-ext#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2"
+  }
+}
