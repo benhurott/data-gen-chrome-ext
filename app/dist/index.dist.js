@@ -3,8 +3,7 @@ var generatos = [];
 angular.module('Gen', [])
     .controller('MainCtrl', function($scope, $timeout) {
 
-        $scope.generators = generatos;
-
+        $scope.generators = generatos.sort(function(a, b) {return a.order - b.order;});
 
         $scope.gen = function(generator) {
             var val = generator.alg();
@@ -63,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 generatos.push({
     title: 'CPF',
+    order: 1,
     alg: function(){
         function randomiza(n) {
             var ranNum = Math.round(Math.random() * n);
@@ -106,6 +106,7 @@ generatos.push({
 });
 generatos.push({
     title: 'Guid',
+    order: 0,
     alg: function () {
         function s4() {
             return Math.floor((1 + Math.random()) * 0x10000)

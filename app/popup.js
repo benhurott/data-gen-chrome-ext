@@ -3,8 +3,7 @@ var generatos = [];
 angular.module('Gen', [])
     .controller('MainCtrl', function($scope, $timeout) {
 
-        $scope.generators = generatos;
-
+        $scope.generators = generatos.sort(function(a, b) {return a.order - b.order;});
 
         $scope.gen = function(generator) {
             var val = generator.alg();

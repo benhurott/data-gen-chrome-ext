@@ -4,7 +4,7 @@
   "description": "A Google Chrome Extension for generating util info, like GUID, CPF(Brazil), etc...",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/benhurott/data-gen-chrome-ext#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2"
   }

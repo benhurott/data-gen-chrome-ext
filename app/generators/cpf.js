@@ -1,5 +1,6 @@
 generatos.push({
     title: 'CPF',
+    order: 1,
     alg: function(){
         function randomiza(n) {
             var ranNum = Math.round(Math.random() * n);

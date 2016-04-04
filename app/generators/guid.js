@@ -1,5 +1,6 @@
 generatos.push({
     title: 'Guid',
+    order: 0,
     alg: function () {
         function s4() {
             return Math.floor((1 + Math.random()) * 0x10000)
